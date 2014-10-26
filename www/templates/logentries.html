@@ -1,0 +1,15 @@
+<ion-view title="Logentries">
+  <ion-header-bar class="bar-subheader">
+    <h1 class="title">Total logs: {{entries.length}}</h1>
+  </ion-header-bar>
+  <ion-content>
+    <ion-list>
+      <ion-item ng-repeat="entry in entries track by $index">
+        <small>{{entry}}</small>
+      </ion-item>
+      <ion-item class="text-center" ng-if="!entries.length">
+        no logs
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>

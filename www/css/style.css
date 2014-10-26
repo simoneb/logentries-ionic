@@ -1,0 +1,11 @@
+ion-item.ng-enter {
+    -webkit-transition: 1s;
+    transition: 1s;
+    opacity: 0;
+    background-color: green;
+}
+
+ion-item.ng-enter-active {
+    background-color: white;
+    opacity: 1;
+}

@@ -1,0 +1,16 @@
+<ion-view title="Account">
+  <ion-nav-buttons side="right">
+    <button class="button-icon ion-plus-round" ng-click="addAccount()"></button>
+  </ion-nav-buttons>
+  <ion-content>
+    <ion-list>
+      <ion-item class="item item-icon-right" ng-repeat="account in accounts" ui-sref="hosts({ account: account })">
+        {{account}}
+          <i class="icon ion-trash-a" ng-click="removeAccount(account, $event)"></i>
+      </ion-item>
+      <ion-item class="text-center" ng-if="!accounts.length">
+        no accounts, tap **+** add one
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>
